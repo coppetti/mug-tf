@@ -125,13 +125,7 @@ def solution(features, labels, mode):
         Predictions used to feed estimator spec.
     
     3 - Logits are obtained trough tf.contrib.layers.fully_connected
-        Uses a flatten layer from a fully connected layer (from normalization of 3 layers)
-    
-    
-    EstimatorSpec fully defines the model to be run by an Estimator.
-    For mode == ModeKeys.TRAIN: required fields are loss and train_op.
-    For mode == ModeKeys.EVAL: required field is loss.
-    For mode == ModeKeys.PREDICT: required fields are predictions."""
+        Uses a flatten layer from a fully connected layer (from normalization of 3 layers)"""
 
     logits = getLogits(features)
     predictions = {
